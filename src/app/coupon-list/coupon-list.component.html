@@ -1,0 +1,37 @@
+<body>
+    <ons-navigator var="navi">
+      <ons-page var="appController">
+        <ons-toolbar class="toolbar">
+          <div class="center">Onsen Places</div>
+          <div class="right">
+            <ons-toolbar-button (click)="filterClick()">Filter</ons-toolbar-button>
+          </div>
+        </ons-toolbar>
+        <input type="search" placeholder="Search" class="search-input searchBar" >
+        <ons-list class="myList fullHeight">
+          <ons-list-item *ngFor="let venue of values" (click)="cellClick(venue)">
+            <ons-row class="item">
+              <ons-col width="100px">
+                <img class="shop" [src]="venue.store_image1" />
+              </ons-col>
+              <ons-col>
+                <ons-row class="item-row">
+                  <ons-col class="shopTitle">{{venue.store_name}}</ons-col>
+                </ons-row>
+                <ons-row class="item-row2">
+                  <ons-col class="info" >
+                    {{venue.store_summary}}
+                  </ons-col>
+                </ons-row>
+              <ons-row class="item-row3" >
+              <ons-col class="street">
+                {{venue.address}}
+              </ons-col>
+            </ons-row>
+          </ons-col>
+      </ons-row>
+    </ons-list-item>
+  </ons-list>
+        </ons-page>
+    </ons-navigator>
+</body>

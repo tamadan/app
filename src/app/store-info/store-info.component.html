@@ -1,0 +1,54 @@
+<body>
+  <ons-navigator var="navi">
+    <ons-page var="appController">
+        <ons-toolbar class="toolbar">
+          <div class="left">
+            <ons-toolbar-button (click)="pop()">戻る</ons-toolbar-button>
+          </div>
+          <div class="center">warif</div>
+        </ons-toolbar>
+        <div class="storeInfo">
+          <div class="storeImageBox" id="slideshow" *ngFor="let image of storeImage">
+              <img class="storeImage" [src]="image" />
+          </div>
+          <div class="infoBox">
+            <div>{{storeName}}</div>
+            <div >{{storeDiscription}}</div>
+            <div>{{address}}</div>
+            <div>{{storeTel}}</div>
+            <div>{{storeMail}}</div>
+            <div>
+              <a [href]="storeLink">りんく</a>
+            </div>
+
+          </div>
+
+        </div>
+        <ons-list class="myList fullHeight">
+            <ons-list-item *ngFor="let venue of warifList" (click)="cellClick(venue)">
+              <ons-row class="item">
+                <ons-col width="100px">
+                  <img class="shop" [src]="venue.warif_image_url" />
+                </ons-col>
+                <ons-col>
+                  <ons-row class="item-row">
+                    <ons-col class="shopTitle">{{venue.warif_name}}</ons-col>
+                  </ons-row>
+                  <ons-row class="item-row2">
+                    <ons-col class="info" >
+                      {{venue.warif_description}}
+                    </ons-col>
+                  </ons-row>
+                <ons-row class="item-row3" >
+                <ons-col class="street">
+                  {{venue.original_price}}→
+                  {{venue.warif_price}}
+                </ons-col>
+              </ons-row>
+            </ons-col>
+        </ons-row>
+      </ons-list-item>
+    </ons-list>
+      </ons-page>
+  </ons-navigator>
+</body>

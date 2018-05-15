@@ -1,0 +1,42 @@
+<body>
+    <ons-navigator var="navi">
+      <ons-page var="appController">
+          <ons-toolbar class="toolbar">
+            <div class="left">
+              <ons-toolbar-button (click)="pop()">戻る</ons-toolbar-button>
+            </div>
+            <div class="center">warif</div>
+          </ons-toolbar>
+          <input type="checkbox" class="check slide" id="checked-slide">
+          <input type="checkbox" class="check fade" id="checked-fade">
+          <input type="checkbox" class="check push" id="checked-push">
+          <input type="checkbox" class="check pull" id="checked-pull">
+          <label class="switch slide" for="checked-slide"></label>
+          <label class="switch fade" for="checked-fade"></label>
+          <label class="switch push" for="checked-push"></label>
+          <label class="switch pull" for="checked-pull"></label>
+          <div class="gatefold">
+            <header class="header">
+              <h1>CSSで全画面の画像を真っ二つに切り開く</h1>
+            </header>
+            <main class="contents">
+              <section class="contents__inner">
+                <h2>HTML</h2>
+                <pre><code>
+                  コンテンツ
+                </code></pre>
+              </section>
+              <section class="contents__inner">
+                <h2>CSS</h2>
+                <pre><code>
+                  コンテンツ
+                </code></pre>
+              </section>
+            </main>
+            <footer class="footer">
+              <p class="btn__box"><a href="https://theorthodoxworks.com/web-design/in-half-the-image-only-css/">このデモのエントリーへ</a></p>
+            </footer>
+          </div>
+        </ons-page>
+    </ons-navigator>
+  </body>
