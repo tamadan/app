@@ -11,12 +11,6 @@ import { FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CouponListService} from './coupon-list.service';
 
-// import { WSAESOCKTNOSUPPORT } from 'constants';
-export const AppRoutes = [
-  {path: '', component: CouponListComponent},
-  {path: 'info', component: StoreInfoComponent}
-];
-
 @NgModule({
   declarations: [AppComponent, Page1Component, CouponListComponent, StoreInfoComponent, CouponActionComponent],
   entryComponents: [CouponListComponent, StoreInfoComponent, CouponActionComponent],
