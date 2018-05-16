@@ -19,7 +19,6 @@ export class CouponListComponent implements OnInit {
 
   ngOnInit() {
     this.search();
-    this.service.getCouponList();
   }
   showDetail() {
     console.log('test');
@@ -28,7 +27,7 @@ export class CouponListComponent implements OnInit {
   search() {
     this.state = 'isLoading';
     // load filter options from localStorage
-    this.http.get('../../assets/json/stores.json')
+    this.service.getStoreList()
     .subscribe(response => {
       let list = [];
       list = response['store'];

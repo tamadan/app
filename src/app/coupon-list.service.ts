@@ -3,13 +3,17 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable()
 export class CouponListService {
-  url = 'https://tonal-loader-200405.appspot.com/api/1/stores';
+  url = 'https://tonal-loader-200405.appspot.com/api/1/';
   constructor(private http: HttpClient) { }
 
-  getCouponList() {
-    this.http.get<string>(this.url).subscribe(data => {
-      console.log(data);
-    });
+  getStoreList(): any {
+    return this.http.get<string>(this.url + 'stores');
+  }
+  getStoreInfo(storeId: string): any {
+    return this.http.get<string>(this.url + 'store/' + storeId);
+  }
+  getCouponList(StoreId: string): any {
+    return this.http.get<string>(this.url + 'warif/' + StoreId + '/store');
   }
 
 }
