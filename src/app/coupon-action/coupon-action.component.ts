@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Params, OnsNavigator} from 'ngx-onsenui';
 import {KSSwiperContainer, KSSwiperSlide} from 'angular2-swiper';
+import { ActivatedRoute, Params, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-coupon-action',
@@ -9,14 +9,12 @@ import {KSSwiperContainer, KSSwiperSlide} from 'angular2-swiper';
 })
 export class CouponActionComponent implements OnInit {
 
-  constructor(private navi: OnsNavigator, private _params: Params) {
-    console.log('parameters:', _params.data);
+  constructor( private route: ActivatedRoute) {
+    route.paramMap.subscribe((params: ParamMap) => {
+      console.log(params)
+    });
   }
 
   ngOnInit() {
   }
-  pop() {
-    this.navi.element.pop();
-  }
-
 }

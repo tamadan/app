@@ -1,13 +1,10 @@
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,viewport-fit=cover">
-<body>
-  <ons-navigator var="navi">
     <ons-page var="appController">
         <ons-toolbar class="toolbar">
-          <div class="left">
-            <ons-toolbar-button (click)="pop()">戻る</ons-toolbar-button>
-          </div>
-          <div class="center">warif</div>
-        </ons-toolbar>
+            <div class="center">Onsen Places</div>
+            <div class="right">
+              <ons-toolbar-button (click)="filterClick()">Filter</ons-toolbar-button>
+            </div>
+          </ons-toolbar>
         <div class="storeInfo">
           <div class="storeImageBox" id="slideshow" *ngFor="let image of storeImage">
               <img class="storeImage" [src]="image" />
@@ -20,6 +17,7 @@
             <div>{{storeMail}}</div>
             <div>
               <a [href]="storeLink">りんく</a>
+              <a routerLink="/warif">わりふ</a>
             </div>
 
           </div>
@@ -50,6 +48,4 @@
         </ons-row>
       </ons-list-item>
     </ons-list>
-      </ons-page>
-  </ons-navigator>
-</body>
+      </ons-page>  

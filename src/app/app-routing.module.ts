@@ -11,7 +11,7 @@ import { CouponActionComponent} from './coupon-action/coupon-action.component';
 /*画面遷移先を追加する場合は以下に遷移時のパスと起動モジュールを定義*/
 const routes: Routes = [
     // パスの指定がない場合はAppNextComponentが起動
-    { path: '', component: CouponListComponent },
+    { path: '', redirectTo: '/login2', pathMatch: 'full', component: CouponListComponent },
     // パスにnextが指定されるとAppNextComponentが起動
     { path: 'info', component: StoreInfoComponent },
     // パスにnextnextが指定されるとAppNextNextComponentが起動

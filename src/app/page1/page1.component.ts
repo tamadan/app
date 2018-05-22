@@ -41,6 +41,8 @@ export class Page1Component {
 
     // action triggered when user swipes
     swipe(currentIndex: number, action = this.SWIPE_ACTION.RIGHT) {
+      console.log(currentIndex + " "+action);
+      
         // out of range
         if (currentIndex > this.avatars.length || currentIndex < 0) return;
 
