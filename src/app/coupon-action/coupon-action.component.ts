@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Params, OnsNavigator} from 'ngx-onsenui';
+import {KSSwiperContainer, KSSwiperSlide} from 'angular2-swiper';
 
 @Component({
   selector: 'app-coupon-action',
