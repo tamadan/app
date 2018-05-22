@@ -13,7 +13,7 @@ import { CouponListService} from './coupon-list.service';
 
 @NgModule({
   declarations: [AppComponent, Page1Component, CouponListComponent, StoreInfoComponent, CouponActionComponent],
-  entryComponents: [CouponListComponent, StoreInfoComponent, CouponActionComponent],
+  entryComponents: [CouponListComponent, StoreInfoComponent, CouponActionComponent, Page1Component],
   imports: [BrowserModule, OnsenModule, HttpClientModule, FormsModule],
   providers: [CouponListService],
   bootstrap: [AppComponent],

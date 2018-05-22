@@ -3,6 +3,7 @@ import { Params, OnsNavigator} from 'ngx-onsenui';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { CouponActionComponent} from '../coupon-action/coupon-action.component';
 import { CouponListService} from '../coupon-list.service';
+import { Page1Component} from '../page1/page1.component';
 
 @Component({
   selector: 'app-store-info',
@@ -54,6 +55,9 @@ export class StoreInfoComponent implements OnInit {
       console.log(list[0]);
       this.warifList = list;
     });
+    this.service.ActionCoupon().subscribe(response => {
+      console.log(response);
+    });
   }
   cellClick(warif) {
     console.log();
@@ -61,6 +65,6 @@ export class StoreInfoComponent implements OnInit {
 
   }
   pop() {
-    this.navi.element.popPage();
+    this.navi.element.pushPage(Page1Component);
   }
 }
