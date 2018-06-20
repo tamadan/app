@@ -11,10 +11,13 @@ export class CouponActionComponent implements OnInit {
 
   constructor( private route: ActivatedRoute) {
     route.paramMap.subscribe((params: ParamMap) => {
-      console.log(params)
+      console.log(params);
     });
   }
 
   ngOnInit() {
+  }
+  pop() {
+
   }
 }

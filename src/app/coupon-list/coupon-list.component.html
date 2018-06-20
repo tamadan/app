@@ -7,7 +7,7 @@
   </ons-toolbar>
   <input type="search" placeholder="Search" class="search-input searchBar" >
   <ons-list class="myList fullHeight">
-    <ons-list-item *ngFor="let venue of values" (click)="cellClick(venue)" routerLink="/info" (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)">
+    <ons-list-item *ngFor="let venue of values" (click)="cellClick(venue)" routerLink="/info" >
       <ons-row class="item">
         <ons-col width="100px">
           <img class="shop" [src]="venue.store_image1" />

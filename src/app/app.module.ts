@@ -15,14 +15,15 @@ const appRoutes: Routes = [
   { path: 'list', component: CouponListComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: 'info', component: StoreInfoComponent },
-  { path: 'warif', component: CouponActionComponent }
+  { path: 'warif', component: CouponActionComponent },
+  { path: 'anime', component: Page1Component }
 ];
 export const routing = RouterModule.forRoot(appRoutes);
 
 @NgModule({
   declarations: [AppComponent, Page1Component, CouponListComponent, StoreInfoComponent, CouponActionComponent],
   entryComponents: [CouponListComponent, StoreInfoComponent, CouponActionComponent, Page1Component],
-  imports: [BrowserModule, OnsenModule, HttpClientModule, FormsModule,routing],
+  imports: [BrowserModule, OnsenModule, HttpClientModule, FormsModule, routing],
   providers: [CouponListService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

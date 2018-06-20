@@ -41,13 +41,12 @@ export class CouponListComponent implements OnInit {
     this.search();
   }
   cellClick(id) {
-    this._router.navigate(['/info',id]);
+    this._router.navigate(['/info', id]);
 
   }
    // action triggered when user swipes
    swipe(currentIndex: number, action = this.SWIPE_ACTION.RIGHT) {
     // out of range
-    console.log(currentIndex + " "+action);
-    
+    console.log(currentIndex  + action);
 }
 }
