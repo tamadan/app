@@ -1,12 +1,6 @@
 <ons-page var="appController">
-  <ons-toolbar class="toolbar">
-    <div class="center">Onsen Places</div>
-    <div class="right">
-      <ons-toolbar-button (click)="filterClick()">Filter</ons-toolbar-button>
-    </div>
-  </ons-toolbar>
   <input type="search" placeholder="Search" class="search-input searchBar" >
-  <ons-list class="myList fullHeight">
+  <ons-list class="myList fullHeight"　overflow-scroll="true">
     <ons-list-item *ngFor="let venue of values" (click)="cellClick(venue)" routerLink="/info" >
       <ons-row class="item">
         <ons-col width="100px">

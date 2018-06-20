@@ -1,10 +1,4 @@
     <ons-page var="appController">
-        <ons-toolbar class="toolbar">
-            <div class="center">Onsen Places</div>
-            <div class="right">
-              <ons-toolbar-button (click)="filterClick()">Filter</ons-toolbar-button>
-            </div>
-          </ons-toolbar>
         <div class="storeInfo">
           <div class="storeImageBox" id="slideshow" *ngFor="let image of storeImage">
               <img class="storeImage" [src]="image" />
@@ -49,4 +43,4 @@
         </ons-row>
       </ons-list-item>
     </ons-list>
-      </ons-page>  
+      </ons-page>
