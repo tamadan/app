@@ -1,3 +1,25 @@
+.card.card--material {
+  height: 192px !important;
+  width: 134px !important;
+  margin-right: -10px;
+  margin-left: -10px;
+  position: relative;
+}
+.swiper-slide {
+  top: 20px;
+}
+
+.swiper-slide.swiper-slide-active {
+  z-index: 3;
+  top: 0;
+}
+
+.swiper-slide.swiper-slide-next,
+.swiper-slide.swiper-slide-prev {
+  z-index: 2;
+  top: 15px;
+}
+
 .toolbar {
   background: #0072b1;
 }

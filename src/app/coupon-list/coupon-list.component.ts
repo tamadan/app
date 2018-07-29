@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, ElementRef } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { StoreInfoComponent} from '../store-info/store-info.component';
 import { CouponListService} from '../coupon-list.service';
@@ -15,8 +15,24 @@ export class CouponListComponent implements OnInit {
   getUrl = 'https://api.foursquare.com/v2/venues/explore/';
   searchString: string;
   values: any[];
+  title = '';
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
-  constructor(private http: HttpClient, private service: CouponListService, private _router: Router) { }
+
+  private inMove = false;
+	private xDef = [0, 0, 0, 0, 0];
+	private yDef = [0, 0, 0, 0, 0];
+	private xStart = 0;
+	private yStart = 0;
+	private defHeight = window.screen.height;
+	private defWidth = window.screen.width;
+	private xPrevious = 0;
+
+  constructor(
+    private el: ElementRef,
+    private http: HttpClient,
+    private service: CouponListService,
+    private _router: Router
+  ) { }
 
   ngOnInit() {
     this.search();
@@ -27,13 +43,15 @@ export class CouponListComponent implements OnInit {
 
   search() {
     this.state = 'isLoading';
+    // FIXME 一旦1にしてるけど、これは変えないとな〜
     // load filter options from localStorage
-    this.service.getStoreList()
-    .subscribe(response => {
+    this.service.getCouponList("1").subscribe(response => {
       let list = [];
-      list = response['store'];
+      list = response['warif'];
       console.log(list[0]);
       this.values = list;
+      this.values = list;
+			this.title = list[0]['warif_name'];
     });
 
   }
@@ -41,12 +59,16 @@ export class CouponListComponent implements OnInit {
     this.search();
   }
   cellClick(id) {
-    this._router.navigate(['/info', id]);
+    // this._router.navigate(['/info', id]);
+    this._router.navigate(['/warif']);
 
   }
-   // action triggered when user swipes
-   swipe(currentIndex: number, action = this.SWIPE_ACTION.RIGHT) {
-    // out of range
-    console.log(currentIndex  + action);
-}
+  //  // action triggered when user swipes
+  // swipe(currentIndex: number, action = this.SWIPE_ACTION.RIGHT) {
+  //   // out of range
+  //   console.log(currentIndex  + action);
+  // }
+  doFab() {
+		alert('あ');
+	}
 }
