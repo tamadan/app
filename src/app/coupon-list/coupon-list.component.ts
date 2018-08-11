@@ -6,6 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/map';
 import * as anime from 'animejs';
 
+
 @Component({
   selector: 'app-coupon-list',
   templateUrl: './coupon-list.component.html',
@@ -72,8 +73,56 @@ export class CouponListComponent implements OnInit {
   doFab() {
 		alert('あ');
   }
+
+  clickWarif($event) {
+    console.log($event);
+    console.log(this.defWidth);
+    console.log(this.defWidth / $event.target.clientWidth);
+
+
+    this.el.nativeElement.getElementsByClassName('speed-dial')[0].hide();
+
+    anime({
+      targets: '.wrapper',
+      easing: 'easeOutQuart',
+      height: '100%',
+      duration: 100,
+      loop: false
+    });
+
+    anime.timeline().add({
+      targets: '.card.card--material:not(.swiper-slide-active)',
+      easing: 'easeOutQuart',
+      opacity: [1, 0],
+      translateY: 20,
+      duration: 400,
+      loop: false
+
+    }).add({
+      targets: '.list-wrapper',
+      offset: '-=600',
+      easing: 'easeInOutCirc',
+      marginTop: ['30%','5%'],
+      duration: 800,
+      loop: false,
+    });
+    anime({
+      targets: $event.target,
+      delay: '200',
+      easing: 'easeOutQuart',
+      width: this.defWidth,
+      height: this.defHeight-30,
+      left: 0,
+      top: 0,
+      zIndex: 10,
+      loop: false,
+      duration: 500,
+      margin: 0
+
+    })
+  }
   
-  clickWarif() {
+  swipeWarif($event, swipeLeft: boolean) {
     console.log(this.el.nativeElement.getElementsByClassName('swiper-slide-left')[0].style);
     console.log(this.el.nativeElement.getElementsByClassName('swiper-slide-prev')[0].style);
     

@@ -10,9 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { CouponListService} from './coupon-list.service';
-import { SwiperModule } from 'ngx-swiper-wrapper';
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import {
+  Component,
+} from 'ngx-onsenui';
 
 const appRoutes: Routes = [
   { path: 'list', component: CouponListComponent },
@@ -23,22 +23,14 @@ const appRoutes: Routes = [
 ];
 export const routing = RouterModule.forRoot(appRoutes);
 
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 'auto',
-  centeredSlides: true,
-  loop: true,
-};
 
 @NgModule({
   declarations: [AppComponent, Page1Component, CouponListComponent, StoreInfoComponent, CouponActionComponent],
   entryComponents: [CouponListComponent, StoreInfoComponent, CouponActionComponent, Page1Component],
-  imports: [BrowserModule, OnsenModule, HttpClientModule, FormsModule, SwiperModule, routing],
-  providers: [CouponListService,
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    }],
+  imports: [BrowserModule, OnsenModule, HttpClientModule, FormsModule, routing],
+  providers: [
+    CouponListService,
+    ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
