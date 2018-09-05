@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { CouponListService } from './coupon-list.service';
+import { WarifApiService } from './warif-api.service';
 
 describe('CouponListService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CouponListService]
+      providers: [WarifApiService]
     });
   });
 
-  it('should be created', inject([CouponListService], (service: CouponListService) => {
+  it('should be created', inject([WarifApiService], (service: WarifApiService) => {
     expect(service).toBeTruthy();
   }));
 });

@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="geocoding(f)" novalidate>
+  <input type="text" name="address" placeholder="場所を入力してください...(例:品川駅)" ngModel>
+  <button (click)="getMyPlace()">現在位置に移動</button>
+</form>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker *ngFor="let map of mapList"  [latitude]="map.lat" [longitude]="map.lng" [label]="map.label" [iconUrl]= "map.icon" (markerClick)="openWindow(map.id)">
+    <agm-info-window [isOpen]="isInfoWindowOpen(map.id)">
+      <div >
+        <img [src]="map.image" alt="" width="130" height="100" class="alignnone size-medium wp-image-986" />
+    </div>
+    <div>
+        <h5 >{{map.name}}</h5>
+        <button (click)="goInfo(map)">詳細ページへ</button>
+    </div>
+    </agm-info-window>
+
+  </agm-marker >
+</agm-map>
+<ul class="scroll_lst" >
+  <li class="scroll_item" *ngFor="let map of mapList">
+      <a class="scroll_item_inr" (click)="cellClick(map)">
+          <div class="scroll_item_thum">
+            <img [src]="map.image" alt="" width="130" height="100" class="alignnone size-medium wp-image-986" />
+          </div>
+          <div class="scroll_item_info">
+            <h5 >{{map.name}}</h5>
+          </div>
+      </a>
+  </li>
+</ul>

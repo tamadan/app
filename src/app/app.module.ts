@@ -1,31 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { OnsenModule } from 'ngx-onsenui';
+import {
+  Component,
+  ViewChild,
+  OnsTab,
+  OnsenModule,
+  NgModule,
+  CUSTOM_ELEMENTS_SCHEMA
+} from 'ngx-onsenui';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app.component';
-import { Page1Component } from './page1/page1.component';
 import { CouponListComponent } from './coupon-list/coupon-list.component';
-import { StoreInfoComponent } from './store-info/store-info.component';
 import { CouponActionComponent } from './coupon-action/coupon-action.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { CouponListService} from './coupon-list.service';
+import { AgmCoreModule } from '@agm/core';
+import { WarifApiService} from './warif-api.service';
+import { WarifStorageService} from './warif-storage.service';
+import { CouponInfoComponent } from './coupon-info/coupon-info.component';
+import { CouponHistoryComponent } from './coupon-history/coupon-history.component';
+import { CouponMapComponent } from './coupon-map/coupon-map.component';
+import { WarifMapService } from './warif-map.service';
+import { GeocoderService } from './geocoder.service';
+
 
 const appRoutes: Routes = [
   { path: 'list', component: CouponListComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
-  { path: 'info', component: StoreInfoComponent },
-  { path: 'warif', component: CouponActionComponent },
-  { path: 'anime', component: Page1Component }
+  { path: 'hist', component:  CouponHistoryComponent},
+  { path: 'info', component: CouponInfoComponent },
+  { path: 'action', component: CouponActionComponent },
+  { path: 'map', component: CouponMapComponent}
 ];
-export const routing = RouterModule.forRoot(appRoutes);
 
 @NgModule({
-  declarations: [AppComponent, Page1Component, CouponListComponent, StoreInfoComponent, CouponActionComponent],
-  entryComponents: [CouponListComponent, StoreInfoComponent, CouponActionComponent, Page1Component],
-  imports: [BrowserModule, OnsenModule, HttpClientModule, FormsModule, routing],
-  providers: [CouponListService],
+  declarations: [AppComponent, CouponListComponent, CouponInfoComponent, CouponActionComponent, CouponHistoryComponent, CouponMapComponent],
+  entryComponents: [CouponListComponent, CouponInfoComponent, CouponHistoryComponent, CouponActionComponent, CouponMapComponent],
+  imports: [BrowserModule, OnsenModule, HttpClientModule, FormsModule, RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBi2rfATMxXGJyi3xpaCM4Y9ie7r1Y09gU'
+    }),],
+  providers: [WarifApiService, WarifStorageService, WarifMapService, GeocoderService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

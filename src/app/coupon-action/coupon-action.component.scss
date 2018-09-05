@@ -47,7 +47,7 @@
 	height: 100%;
 	margin: 40px auto 0;
 	padding: 20px;
-	text-align: left;
+	text-align: center;
 	background: #eee;
 }
 
@@ -207,3 +207,13 @@
 	-webkit-transform: perspective(1500px) rotateY(80deg);
 	transform: perspective(1500px) rotateY(80deg);
 }
+
+.inputPassword {
+  font-size: 500%;
+}
+
+.actionButton {
+font-size: 1.4em;
+font-weight: bold;
+padding: 10px 30px;
+  }

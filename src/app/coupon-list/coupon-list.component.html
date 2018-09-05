@@ -1,27 +1,22 @@
-<ons-page var="appController">
-  <input type="search" placeholder="Search" class="search-input searchBar" >
-  <ons-list class="myList fullHeight"　overflow-scroll="true">
-    <ons-list-item *ngFor="let venue of values" (click)="cellClick(venue)" routerLink="/info" >
-      <ons-row class="item">
-        <ons-col width="100px">
-          <img class="shop" [src]="venue.store_image1" />
-        </ons-col>
-        <ons-col>
-          <ons-row class="item-row">
-            <ons-col class="shopTitle">{{venue.store_name}}</ons-col>
-          </ons-row>
-          <ons-row class="item-row2">
-            <ons-col class="info" >
-              {{venue.store_summary}}
-            </ons-col>
-          </ons-row>
-          <ons-row class="item-row3" >
-            <ons-col class="street">
-              {{venue.address}}
-            </ons-col>
-          </ons-row>
-        </ons-col>
-        </ons-row>
-      </ons-list-item>
-    </ons-list>
-  </ons-page>
+<form #f="ngForm"  novalidate>
+  <input type="text" name="address" placeholder="クーポン名検索" ngModel>
+  <button (click)="searchWord()">検索</button>
+  <button (click)="searchCategory()">カテゴリ検索</button>
+  <button (click)="searchMap()">Mapから検索</button>
+</form>
+      <div class="horizontal_scroll_wrap">
+          <ul class="scroll_lst" >
+              <li class="scroll_item" *ngFor="let venue of values;">
+                  <a class="scroll_item_inr" (click)="cellClick(venue)">
+                      <div class="scroll_item_thum">
+                          <img [src]="venue.warif_image_url" alt="" width="220" height="158" class="alignnone size-medium wp-image-986" />
+                      </div>
+                      <div class="scroll_item_info">
+                          <h5 class="scroll_item_ttl">{{venue.warif_name}}</h5>
+                          <h3>{{venue.warif_description}}</h3>
+                          <h1>{{venue.original_price}} ⇒　{{venue.warif_price}} </h1>
+                      </div>
+                  </a>
+              </li>
+       </ul>
+       </div>

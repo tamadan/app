@@ -1,4 +1,5 @@
-<ons-page var="appController">
+<div class="background"></div>
+<div var="appController" class="content" class="normal-page">
     <ons-toolbar class="toolbar">
       <div class="left">
         <ons-toolbar-button (click)="pop()">戻る</ons-toolbar-button>
@@ -15,24 +16,20 @@
     <label class="switch pull" for="checked-pull"></label>
     <div class="gatefold" ng-swipe-up="swipe($event)">
       <header class="header">
-        <h1>CSSで全画面の画像を真っ二つに切り開く</h1>
+        <h1>店員さんが使用する画面です。</h1>
       </header>
       <main class="contents">
         <section class="contents__inner">
-          <h2>HTML</h2>
-          <pre><code>
-            コンテンツ
-          </code></pre>
+            <label id="input-password">パスワードを入力してください
+                <input class="inputPassword" type="password" [(ngModel)]="pass" placeholder="password">
+              </label>
         </section>
         <section class="contents__inner">
-          <h2>CSS</h2>
-          <pre><code>
-            コンテンツ
-          </code></pre>
+            <button class="actionButton" type="submit" (click)="onclick()">Button</button>
         </section>
       </main>
       <footer class="footer">
         <p class="btn__box"><a href="https://theorthodoxworks.com/web-design/in-half-the-image-only-css/">このデモのエントリーへ</a></p>
       </footer>
     </div>
-  </ons-page>
+</div>
