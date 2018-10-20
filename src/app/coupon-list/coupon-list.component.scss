@@ -3,9 +3,22 @@
   width: 188px;
   position: absolute;
   border-radius: 2px;
+  
 }
+
+.card.card--material>img {
+  width: 100%;
+}
+
+.card__content.card--material__content {
+  padding-right: 16px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
 .swiper-slide {
   top: 26px;
+  padding: 0;
 }
 
 .swiper-slide.swiper-slide-active {

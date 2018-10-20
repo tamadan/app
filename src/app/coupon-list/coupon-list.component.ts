@@ -27,7 +27,11 @@ export class CouponListComponent implements OnInit {
 	private yStart = 0;
 	private defHeight = window.screen.height;
 	private defWidth = window.screen.width;
-	private xPrevious = 0;
+  private xPrevious = 0;
+  
+  private warifList = [];
+
+  imgList = [];
 
   constructor(
     private el: ElementRef,
@@ -53,7 +57,11 @@ export class CouponListComponent implements OnInit {
       console.log(list[0]);
       this.values = list;
       this.values = list;
-			this.title = list[0]['warif_name'];
+      this.title = list[0]['warif_name'];
+      for (const l of list) {
+        this.imgList.push(l['warif_image_url']);
+        this.warifList.push(l['warif_name']);
+      }
     });
 
   }
@@ -127,191 +135,380 @@ export class CouponListComponent implements OnInit {
     console.log(this.el.nativeElement.getElementsByClassName('swiper-slide-prev')[0].style);
     
     // TODO: どんなブラウザでも真ん中に来るように自動計算しないといけない
-    anime.timeline().add({
-      targets: 'div.card--material.swiper-slide:nth-child(2)',
-      easing: 'easeOutCubic',
-      translateX: [
-
-        {
-          value: -200 ,
-          duration: 400
-        }
-
-      ],
-      translateY: [
-        {
-          value: 4,
-          duration: 100
+    if (swipeLeft) {
+      anime.timeline().add({
+        targets: 'div.card--material.swiper-slide:nth-child(2)',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: -15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: 2,
+            duration: 100
+          },
+          {
+            value: 6,
+            duration: 50
+          },
+          {
+            value: 12,
+            duration: 250
+          }
+        ],
+        opacity: [1, 0],
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(3)',
+        offset: '-=1000',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: -15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: 1,
+            duration: 100
+          },
+          {
+            value: 5,
+            duration: 50
+          },
+          {
+            value: 11,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [2, 1],
+          round: true
         },
-        {
-          value: 8,
-          duration: 50
+        loop: false
+      }).add({
+        targets: 'div.swiper-slide-active',
+        offset: '-=900',
+        easing: 'easeOutCubic',
+        translateX: [
+          
+          {
+            value: -121,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: 2,
+            duration: 100
+          },
+          {
+            value: 6,
+            duration: 50
+          },
+          {
+            value: 15,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [3, 2],
+          round: true
         },
-        {
-          value: 15,
-          duration: 250
-        }
-      ],
-      opacity: [1, 0],
-      loop: false
-    }).add({
-      targets: 'div.card--material.swiper-slide:nth-child(3)',
-      offset: '-=1000',
-      easing: 'easeOutCubic',
-      translateX: [
-
-        {
-          value: -15,
-          duration: 400
-        }
-
-      ],
-      translateY: [
-        {
-          value: 1,
-          duration: 100
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(5)',
+        offset: '-=800',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: -117,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: -10,
+            duration: 100
+          },
+          {
+            value: -12,
+            duration: 50
+          },
+          {
+            value: -15,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [2, 3],
+          round: true
         },
-        {
-          value: 2,
-          duration: 50
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(6)',
+        offset: '-=800',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: -15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: -8,
+            duration: 100
+          },
+          {
+            value: -10,
+            duration: 50
+          },
+          {
+            value: -11,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [1, 2],
+          round: true
         },
-        {
-          value: 8,
-          duration: 250
-        }
-      ],
-      zIndex: {
-        value: [2, 1],
-        round: true
-      },
-      loop: false
-    }).add({
-      targets: 'div.swiper-slide-active',
-      offset: '-=900',
-      easing: 'easeOutCubic',
-      translateX: [
-        
-        {
-          value: -121,
-          duration: 400
-        }
-
-      ],
-      translateY: [
-        {
-          value: 2,
-          duration: 100
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(7)',
+        offset: '-=800',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: -15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: -5,
+            duration: 100
+          },
+          {
+            value: -12,
+            duration: 50
+          },
+          {
+            value: -15,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [0, 1],
+          round: true
         },
-        {
-          value: 3,
-          duration: 50
+        opacity: 1,
+        loop: false
+      });
+      this.title = this.warifList[2];
+    } else {
+      anime.timeline().add({
+        targets: 'div.card--material.swiper-slide:nth-child(6)',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: 15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: 2,
+            duration: 100
+          },
+          {
+            value: 6,
+            duration: 50
+          },
+          {
+            value: 12,
+            duration: 250
+          }
+        ],
+        opacity: [1, 0],
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(5)',
+        offset: '-=1000',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: 15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: 1,
+            duration: 100
+          },
+          {
+            value: 5,
+            duration: 50
+          },
+          {
+            value: 11,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [2, 1],
+          round: true
         },
-        {
-          value: 10,
-          duration: 250
-        }
-      ],
-      zIndex: {
-        value: [3, 2],
-        round: true
-      },
-      loop: false
-    }).add({
-      targets: 'div.card--material.swiper-slide:nth-child(5)',
-      offset: '-=800',
-      easing: 'easeOutCubic',
-      translateX: [
-
-        {
-          value: -117,
-          duration: 400
-        }
-
-      ],
-      translateY: [
-        {
-          value: -10,
-          duration: 100
+        loop: false
+      }).add({
+        targets: 'div.swiper-slide-active',
+        offset: '-=900',
+        easing: 'easeOutCubic',
+        translateX: [
+          
+          {
+            value: 121,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: 2,
+            duration: 100
+          },
+          {
+            value: 6,
+            duration: 50
+          },
+          {
+            value: 15,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [3, 2],
+          round: true
         },
-        {
-          value: -12,
-          duration: 50
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(3)',
+        offset: '-=800',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: 117,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: -10,
+            duration: 100
+          },
+          {
+            value: -12,
+            duration: 50
+          },
+          {
+            value: -15,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [2, 3],
+          round: true
         },
-        {
-          value: -15,
-          duration: 250
-        }
-      ],
-      zIndex: {
-        value: [2, 3],
-        round: true
-      },
-      loop: false
-    }).add({
-      targets: 'div.card--material.swiper-slide:nth-child(6)',
-      offset: '-=800',
-      easing: 'easeOutCubic',
-      translateX: [
-
-        {
-          value: -15,
-          duration: 400
-        }
-
-      ],
-      translateY: [
-        {
-          value: -10,
-          duration: 100
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(2)',
+        offset: '-=800',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: 15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: -8,
+            duration: 100
+          },
+          {
+            value: -10,
+            duration: 50
+          },
+          {
+            value: -11,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [1, 2],
+          round: true
         },
-        {
-          value: -12,
-          duration: 50
+        loop: false
+      }).add({
+        targets: 'div.card--material.swiper-slide:nth-child(1)',
+        offset: '-=800',
+        easing: 'easeOutCubic',
+        translateX: [
+  
+          {
+            value: 15,
+            duration: 400
+          }
+  
+        ],
+        translateY: [
+          {
+            value: -5,
+            duration: 100
+          },
+          {
+            value: -12,
+            duration: 50
+          },
+          {
+            value: -15,
+            duration: 250
+          }
+        ],
+        zIndex: {
+          value: [0, 1],
+          round: true
         },
-        {
-          value: -15,
-          duration: 250
-        }
-      ],
-      zIndex: {
-        value: [1, 2],
-        round: true
-      },
-      loop: false
-    }).add({
-      targets: 'div.card--material.swiper-slide:nth-child(7)',
-      offset: '-=800',
-      easing: 'easeOutCubic',
-      translateX: [
-
-        {
-          value: -15,
-          duration: 400
-        }
-
-      ],
-      translateY: [
-        {
-          value: -8,
-          duration: 100
-        },
-        {
-          value: -15,
-          duration: 50
-        },
-        {
-          value: -18,
-          duration: 250
-        }
-      ],
-      zIndex: {
-        value: [0, 1],
-        round: true
-      },
-      opacity: 1,
-      loop: false
-    });
-
+        opacity: 1,
+        loop: false
+      });
+      this.title = this.warifList[1];
+    }
+    
     // TODO ここにDOMを操作する処理を入れる
 
   }

@@ -12,29 +12,36 @@
   <div class="wrapper list-wrapper" style="height: 70%; margin-top:30%; width: 100%; position: absolute;">
     <div class="wrapper s-wrapper swiper swiper-container swiper-container-horizontal swiper-container-ios">
       <div class="swiper-wrapper"
-      (swipeleft)="swipeWarif($event, true)"
-      (swiperight)="swipeWarif($event, false)"
-      (tap)="clickWarif($event)"
+        (swipeleft)="swipeWarif($event, true)"
+        (swiperight)="swipeWarif($event, false)"
+        (tap)="clickWarif($event)"
       >
         <div class="swiper-slide card card--material swiper-slide-opacity-left">
+          <img [src]="imgList[5]" alt="">
           <div class="card__content card--material__content">L</div>
         </div>
         <div class="swiper-slide card card--material swiper-slide-left">
+          <img [src]="imgList[3]" alt="">
           <div class="card__content card--material__content">Lorem</div>
         </div>
         <div class="swiper-slide card card--material swiper-slide-prev">
+          <img [src]="imgList[1]" alt="">
           <div class="card__content card--material__content">Lorem ipsum</div>
         </div>
         <div class="swiper-slide card card--material swiper-slide-active">
+          <img [src]="imgList[0]" alt="">
           <div class="card__content card--material__content">Lorem ipsum dolor</div>
         </div>
         <div class="swiper-slide card card--material swiper-slide-next">
+            <img [src]="imgList[2]" alt="">
           <div class="card__content card--material__content">Lorem ipsum sit</div>
         </div>
         <div class="swiper-slide card card--material swiper-slide-right">
+          <img [src]="imgList[4]" alt="">
           <div class="card__content card--material__content">Lorem ipsum sit amet</div>
         </div>
         <div class="swiper-slide card card--material swiper-slide-opacity-right">
+          <img [src]="imgList[6]" alt="">
           <div class="card__content card--material__content">Lorem ipsum sit amet hoge fuga</div>
         </div>
       </div>

@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/* line 1, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.card.card--material {
+  height: 334px;
+  width: 188px;
+  position: absolute;
+  border-radius: 2px; }
+
+/* line 7, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide {
+  top: 26px; }
+
+/* line 11, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide.swiper-slide-active {
+  z-index: 3;
+  top: 0;
+  left: 90px; }
+
+/* line 17, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide.swiper-slide-next,
+.swiper-slide.swiper-slide-prev {
+  z-index: 2;
+  top: 15px; }
+
+/* line 24, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide.swiper-slide-prev {
+  left: -31px; }
+
+/* line 28, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide.swiper-slide-next {
+  left: 207px; }
+
+/* line 32, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide.swiper-slide-left {
+  left: -46px; }
+
+/* line 36, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide.swiper-slide-right {
+  left: 222px; }
+
+/* line 40, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.toolbar {
+  background: #0072b1; }
+
+/* line 44, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.toolbar div {
+  color: white; }
+
+/* line 48, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.ons-toolbar-button {
+  color: white; }
+
+/* line 52, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.toolbar-button {
+  color: white; }
+
+/* line 56, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.filterCol {
+  line-height: 65px;
+  padding-left: 12px;
+  font-size: 20px; }
+
+/* line 62, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.filterCol2 {
+  margin-top: 20px; }
+
+/* line 66, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.loader {
+  margin-top: 52px;
+  display: flex; }
+
+/* line 71, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.loader2 {
+  margin-top: 25px;
+  display: flex; }
+
+/* line 76, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.myList {
+  margin-top: 32px; }
+
+/* line 80, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.backText {
+  padding-left: 15px;
+  padding-top: 12px; }
+
+/* line 85, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.searchBar {
+  width: 100%;
+  position: absolute;
+  top: 2px;
+  z-index: 10000; }
+
+/* line 92, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px; }
+
+/* line 99, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.fullHeight {
+  -webkit-overflow-scrolling: touch;
+  height: 100%; }
+
+/* line 104, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.noResults {
+  margin-top: 32px;
+  padding-top: 15px;
+  font-size: 18px;
+  color: grey;
+  text-align: center; }
+
+/* line 112, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.loader div {
+  flex-grow: 1; }
+
+/* line 116, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.loader2 div {
+  flex-grow: 1; }
+
+/* line 120, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.myC {
+  align-self: center;
+  padding-left: 20px; }
+
+/* line 125, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.border {
+  border-color: lightgrey;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1px; }
+
+/* line 132, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.item {
+  border-color: lightgrey;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1px; }
+
+/* line 139, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.shop {
+  margin-top: 10px;
+  width: 90px;
+  height: 90px; }
+
+/* line 145, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.item-row {
+  line-height: 20px;
+  margin-top: 10px; }
+
+/* line 150, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.item-row2 {
+  margin-top: 5px;
+  line-height: 15px; }
+
+/* line 155, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.toolbar-button--quiet {
+  color: white; }
+
+/* line 159, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.item-row3 {
+  margin-top: 5px;
+  line-height: 17px; }
+
+/* line 164, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.item-row4 {
+  line-height: 17px; }
+
+/* line 168, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.distance {
+  font-size: 13px;
+  color: grey; }
+
+/* line 173, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.info {
+  margin-top: 2px;
+  font-size: 13px;
+  color: grey; }
+
+/* line 179, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.street {
+  font-size: 13px; }
+
+/* line 183, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.rightText {
+  text-align: right; }
+
+/* line 187, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.shopTitle {
+  font-weight: 500;
+  font-size: 16px; }
+
+/* line 191, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.card-img {
+  position: relative;
+  /*相対配置*/ }
+
+/* line 196, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.card-shop {
+  position: absolute;
+  color: white;
+  /*文字は白に*/
+  font-weight: bold;
+  /*太字に*/
+  font-size: 1em;
+  /*サイズ2倍*/
+  font-family: Quicksand, sans-serif;
+  /*Google Font*/
+  top: 0;
+  left: 20;
+  text-shadow: 0.5px 0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px -0.5px 0 #000; }
+
+/* line 209, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.card-img__item {
+  display: inline; }
+
+/* line 213, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-wrapper {
+  position: relative;
+  width: 2500px;
+  height: 400px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform,-webkit-transform;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 231, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide-opacity-left {
+  left: -50px;
+  top: 41px; }
+
+/* line 236, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide-opacity-right {
+  left: 237px;
+  top: 41px; }
+
+/* line 241, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper-slide-opacity-left,
+.swiper-slide-opacity-right {
+  opacity: 0; }
+
+/* line 246, /Users/apple/Documents/dev/team/app/src/app/coupon-list/coupon-list.component.scss */
+.swiper {
+  overflow-x: hidden; }
+
+/*# sourceMappingURL=coupon-list.component.css.map */
