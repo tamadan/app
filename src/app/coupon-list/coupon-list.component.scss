@@ -1,15 +1,115 @@
-.horizontal_scroll_wrap{
-  background: #f1f1f1;
-  height: 400px;
-  overflow-y: hidden;
-  margin: 0 -10px;
+.card.card--material {
+  height: 334px;
+  width: 188px;
+  position: absolute;
+  border-radius: 2px;
+  
 }
-.scroll_lst {
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  padding-bottom: 50px;
-  margin: 25px 0 0;
+
+.card.card--material>img {
+  width: 100%;
+}
+
+.card__content.card--material__content {
+  padding-right: 16px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.swiper-slide {
+  top: 26px;
+  padding: 0;
+}
+
+.swiper-slide.swiper-slide-active {
+  z-index: 3;
+  top: 0;
+  left: 90px;
+}
+
+.swiper-slide.swiper-slide-next,
+.swiper-slide.swiper-slide-prev {
+  z-index: 2;
+  top: 15px;
+
+}
+
+.swiper-slide.swiper-slide-prev {
+  left: -31px;
+}
+
+.swiper-slide.swiper-slide-next {
+  left: 207px;
+}
+
+.swiper-slide.swiper-slide-left {
+  left: -46px;
+}
+
+.swiper-slide.swiper-slide-right {
+  left: 222px;
+}
+
+.toolbar {
+  background: #0072b1;
+}
+
+.toolbar div {
+  color: white;
+}
+
+.ons-toolbar-button {
+  color: white;
+}
+
+.toolbar-button {
+  color: white;
+}
+
+.filterCol {
+  line-height: 65px;
+  padding-left: 12px;
+  font-size: 20px;
+}
+
+.filterCol2 {
+  margin-top: 20px;
+}
+
+.loader {
+  margin-top: 52px;
+  display: flex;
+}
+
+.loader2 {
+  margin-top: 25px;
+  display: flex;
+}
+
+.myList {
+  margin-top: 32px;
+}
+
+.backText {
+  padding-left: 15px;
+  padding-top: 12px;
+}
+
+.searchBar {
+  width: 100%;
+  position: absolute;
+  top: 2px;
+  z-index: 10000;
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+
+.fullHeight {
   -webkit-overflow-scrolling: touch;
 }
 .scroll_item {
@@ -35,4 +135,41 @@
   color: #484848;
   line-height: 1.4;
   margin-bottom: 0;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 2500px;
+  height: 400px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform,-webkit-transform;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.swiper-slide-opacity-left {
+  left: -50px;
+  top: 41px;
+}
+
+.swiper-slide-opacity-right {
+  left: 237px;
+  top: 41px;
+}
+
+.swiper-slide-opacity-left,
+.swiper-slide-opacity-right {
+  opacity: 0;
+}
+
+.swiper {
+  overflow-x: hidden;
 }

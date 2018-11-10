@@ -23,7 +23,6 @@ import { CouponMapComponent } from './coupon-map/coupon-map.component';
 import { WarifMapService } from './warif-map.service';
 import { GeocoderService } from './geocoder.service';
 
-
 const appRoutes: Routes = [
   { path: 'list', component: CouponListComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
@@ -32,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'action', component: CouponActionComponent },
   { path: 'map', component: CouponMapComponent}
 ];
+
 
 @NgModule({
   declarations: [AppComponent, CouponListComponent, CouponInfoComponent, CouponActionComponent, CouponHistoryComponent, CouponMapComponent],
