@@ -1,0 +1,17 @@
+<h6>りれき</h6>
+<div class="horizontal_scroll_wrap">
+  <ul class="scroll_lst" >
+      <li class="scroll_item" *ngFor="let venue of values;">
+          <a class="scroll_item_inr" (click)="cellClick(venue)">
+              <div class="scroll_item_thum">
+                  <img [src]="venue.warif_image_url" alt="" width="220" height="158" class="alignnone size-medium wp-image-986" />
+              </div>
+              <div class="scroll_item_info">
+                  <h5 class="scroll_item_ttl">{{venue.warif_name}}</h5>
+                  <h3>{{venue.warif_description}}</h3>
+                  <h1>{{venue.original_price}} ⇒　{{venue.warif_price}} </h1>
+              </div>
+          </a>
+      </li>
+</ul>
+</div>

@@ -1,8 +1,8 @@
 import { Component, OnInit, Injectable, ElementRef } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { StoreInfoComponent} from '../store-info/store-info.component';
-import { CouponListService} from '../coupon-list.service';
+import { WarifApiService} from '../warif-api.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { WarifStorageService} from '../warif-storage.service';
 import 'rxjs/add/operator/map';
 import * as anime from 'animejs';
 
@@ -36,7 +36,7 @@ export class CouponListComponent implements OnInit {
   constructor(
     private el: ElementRef,
     private http: HttpClient,
-    private service: CouponListService,
+    private service: WarifApiService,
     private _router: Router
   ) { }
 
@@ -65,9 +65,16 @@ export class CouponListComponent implements OnInit {
     });
 
   }
-  filterClick() {
-    this.search();
+
+  searchCategory() {
   }
+  searchMap() {
+    this._router.navigate(['/map']);
+  }
+  searchWord() {
+
+  }
+
   cellClick(id) {
     // this._router.navigate(['/info', id]);
     this._router.navigate(['/warif']);

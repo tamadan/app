@@ -111,116 +111,30 @@
 
 .fullHeight {
   -webkit-overflow-scrolling: touch;
-  height: 100%;
+}
+.scroll_item {
+  margin-right: 10px;
+  display: inline-block;
+  width: 220px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.scroll_item:first-child {
+  margin-left: 10px;
 }
 
-.noResults {
-  margin-top: 32px;
-  padding-top: 15px;
-  font-size: 18px;
-  color: grey;
-  text-align: center
+.scroll_item_inr {
+  display: block;
 }
-
-.loader div {
-  flex-grow: 1;
+.scroll_item_info {
+  white-space: normal;
+  padding: 8px;
 }
-
-.loader2 div {
-  flex-grow: 1;
-}
-
-.myC {
-  align-self: center;
-  padding-left: 20px;
-}
-
-.border {
-  border-color: lightgrey;
-  border-style: solid;
-  border-width: 0px;
-  border-bottom-width: 1px;
-}
-
-.item {
-  border-color: lightgrey;
-  border-style: solid;
-  border-width: 0px;
-  border-bottom-width: 1px;
-}
-
-.shop {
-  margin-top: 10px;
-  width: 90px;
-  height: 90px;
-}
-
-.item-row {
-  line-height: 20px;
-  margin-top: 10px;
-}
-
-.item-row2 {
-  margin-top: 5px;
-  line-height: 15px;
-}
-
-.toolbar-button--quiet {
-  color: white;
-}
-
-.item-row3 {
-  margin-top: 5px;
-  line-height: 17px;
-}
-
-.item-row4 {
-  line-height: 17px;
-}
-
-.distance {
-  font-size: 13px;
-  color: grey;
-}
-
-.info {
-  margin-top: 2px;
-  font-size: 13px;
-  color: grey;
-}
-
-.street {
-  font-size: 13px;
-}
-
-.rightText {
-  text-align: right;
-}
-
-.shopTitle {
-  font-weight: 500;
-  font-size: 16px;
-}
-.card-img {
-  position: relative;/*相対配置*/
-
-
-}
-.card-shop {
-  position: absolute;
-  color: white;/*文字は白に*/
-  font-weight: bold; /*太字に*/
-  font-size: 1em;/*サイズ2倍*/
-  font-family :Quicksand, sans-serif;/*Google Font*/
-  top: 0;
-  left: 20;
-  text-shadow: 0.5px 0.5px 0 #000,
-             -0.5px 0.5px 0 #000,
-             0.5px -0.5px 0 #000,
-             -0.5px -0.5px 0 #000;
-}
-.card-img__item {
-  display: inline;
+.scroll_item_ttl {
+  font-size: 12px;
+  color: #484848;
+  line-height: 1.4;
+  margin-bottom: 0;
 }
 
 .swiper-wrapper {

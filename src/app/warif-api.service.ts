@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Warif} from './model/warif';
 
 @Injectable()
-export class CouponListService {
+export class WarifApiService {
   url = 'https://tonal-loader-200405.appspot.com/api/1/';
   data = {
     'warif': {
@@ -29,6 +28,7 @@ export class CouponListService {
   getCouponList(StoreId: string): any {
     return this.http.get<string>(this.url + 'warif/' + StoreId + '/store');
   }
-
-
+  getCouponListByIds(warifIds: string[]): any {
+    return this.http.get<string>(this.url + 'warif/' + '1' + '/store');
+  }
 }

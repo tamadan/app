@@ -1,14 +1,19 @@
-<div class="example-container">
-
-
-  <nav >
-    <ons-toolbar class="toolbar">
-            <div class="left">
-            <ons-toolbar-button (click)="pop()">戻る</ons-toolbar-button>
-            </div>
-            <div class="center">warif</div>
-    </ons-toolbar>
-    <p></p>
-  </nav>
+<ons-page>
+  <ons-toolbar class="toolbar">
+      <div class="left">
+          <ons-toolbar-button (click)="back()">Back</ons-toolbar-button>
+        </div>
+    <div class="center">わりふ</div>
+    <div class="right">
+      <ons-toolbar-button (click)="filterClick()">履歴削除</ons-toolbar-button>
+    </div>
+  </ons-toolbar>
   <router-outlet ></router-outlet>
+<div class="footer">
+  <input id="tab-1" type="radio" name="tab-radio" routerLink="/list" checked>
+  <label class="tab-label" for="tab-1">タブ1</label>
+
+  <input id="tab-2" type="radio" name="tab-radio" routerLink="/hist">
+  <label class="tab-label" for="tab-2">タブ2</label>
 </div>
+</ons-page>

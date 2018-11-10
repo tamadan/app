@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import * as ons from 'onsenui';
 import { CouponListComponent } from './coupon-list/coupon-list.component';
+import { CouponActionComponent} from './coupon-action/coupon-action.component';
 import { Location } from '@angular/common';
-const EventSource: any = window['EventSource'];
+import { WarifStorageService } from './warif-storage.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,15 +13,13 @@ const EventSource: any = window['EventSource'];
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private location: Location) {
+  constructor(private _router: Router, private _location: Location, private history_service: WarifStorageService) { }
+
+  back() {
+    console.log('back');
+    this._location.back();
   }
-  pop() {
-    this.location.back();
-  }
-  clickMenu() {
-    console.log('メニューが押された');
-  }
-  clickSerch() {
-    console.log('検索ボタンが押された');
+  filterClick() {
+    this.history_service.clear();
   }
 }
